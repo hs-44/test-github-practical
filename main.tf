@@ -9,3 +9,12 @@ resource "aws_vpc" "terraform_test_vpc" {
     Name = "terraform_test_vpc"
   }
 }
+
+
+resource "aws_internet_gateway" "terraform_test_internet_gateway" {
+  vpc_id = aws_vpc.terraform_test_vpc.id
+
+  tags = {
+    Name = "terraform_test_internet_gateway"
+  }
+}
