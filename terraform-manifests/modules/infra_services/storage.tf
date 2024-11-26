@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = var.aws_new1_bucket
+  bucket = aws_new1_bucket
 }
 
 # resource "aws_s3_bucket_acl" "s3_bucket_acl" {
@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "s3_bucket" {
 # }
 
 resource "aws_s3_bucket_versioning" "s3_versioning" {
-  bucket = var.aws_new1_bucket.s3_bucket.id
+  bucket = aws_new1_bucket.s3_bucket.id
   versioning_configuration {
     status = "Enabled"
   }
