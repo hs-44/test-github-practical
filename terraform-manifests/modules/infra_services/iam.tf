@@ -27,7 +27,7 @@ resource "aws_iam_policy" "ec2_policy" {
 # path.module is the filesystem path of the module where the expression is placed.
 resource "aws_iam_role" "ec2_s3_access_role" {
   name               = "${var.cloud_env}-ec2-role"
-  assume_role_policy = "${file("${path.module}/assumerolepolicy.json")}"
+  assume_role_policy = "${file("${../modules/infra_services}/assumerolepolicy.json")}"
 }
 
 #Attach role to policy
