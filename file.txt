@@ -1,5 +1,0 @@
-this is file created in local repo
-this is file created in local repo more changes
-this if file created in change in remote repo
-this is file change in git
-this is the change in remote
